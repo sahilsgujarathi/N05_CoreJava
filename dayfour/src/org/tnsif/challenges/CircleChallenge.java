@@ -12,11 +12,28 @@
 */
 
 package org.tnsif.challenges;
+import java.util.Scanner;
 
 public class CircleChallenge {
+	
+	public static int Recursion(int n, int A) {
+		if(n==1) {
+			return 1;
+		}
+		int nextSurvivor = Recursion(n-1,A);
+		int survivor = (nextSurvivor + A - 1) % n + 1;
+		return survivor;
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int a = sc.nextInt();
+		int position = Recursion(n,a);
+		System.out.println("The Position is:- " + position);
+		
+		sc.close();
 
 	}
 
