@@ -1,5 +1,5 @@
 /*
- * Write a Program to calculate the hotel tarif . the room rent is 12% high during peak 
+ * Write a Program to calculate the hotel tarif . the room rent is 20% high during peak 
  * seasons (April to june is the peak season and nov to dec also peak season) , 
  * hint:- use the switch cases. 
  * Input:- month = 3;
@@ -16,7 +16,7 @@ public class HotelTarif {
 	public static void tarif(int month, int rent, int day) {
 		float budget;
 		if(month == 4 || month == 5 || month == 6 || month == 11 || month == 12) {
-			float percent_add = (12*rent)/100;
+			float percent_add = (20*rent)/100;
 			float tempRent = rent + percent_add;
 			budget = tempRent * day;
 		}
@@ -61,7 +61,7 @@ public class HotelTarif {
 			System.out.println("The Budget is:- " + budget);
 			break;
 		default:
-			System.out.println("Enter Valid Month.");
+			System.out.println("Invalid Month No.");
 			
 		}
 	}
