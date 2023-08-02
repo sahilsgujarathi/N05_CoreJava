@@ -2,15 +2,12 @@
 package org.tnsif.polymorphism;
 
 class Laptop {
-	String generation1;
 	void specification(String generation1, String generation2) {
 		System.out.println("Laptop:- " + generation1);
 	}
 }
 
-class Dell extends Laptop {
-	String generation2;
-	
+class Dell extends Laptop {	
 	@Override
 	void specification(String generation1 , String generation2) {
 		super.specification(generation1, generation2);
